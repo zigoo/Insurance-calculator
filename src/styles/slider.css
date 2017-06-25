@@ -1,0 +1,131 @@
+@media (min-width: 768px) {
+    input[type=range].myslider::-webkit-slider-runnable-track {
+        max-width: 103%;
+    }
+}
+
+
+@media screen and (min-width:480px) {
+    .mobilka {
+        visibility: hidden;
+    }
+    ,
+    .grid__slider h1 {
+        font-size: 18px;
+        margin-top: 4%;
+        margin-bottom: 6%;
+        border: 1px red solid;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .grid__slider h1 {
+        font-size: 18px;
+        margin-top: 4%;
+        margin-bottom: 6%;
+    }
+    ,
+    .slider__value {
+        visibility: hidden;
+    }
+}
+
+span {
+    color: blue;
+    font-size: 36px;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.grid__slider h1 {
+    font-size: 18px;
+    margin-bottom: 3%;
+    margin-top: 5%;
+}
+
+.grid__helpers {
+    color: #9dbdc6;
+    font-size: 14px;
+}
+
+.grid__helpers__left {
+    display: inline-block;
+    width: 50%;
+    color: #9dbdc6;
+}
+
+.grid__helpers__right {
+    display: inline-block;
+    ;
+    width: 50%;
+    color: #9dbdc6;
+}
+
+.slider__value {
+    color: #ff3d2e;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    display: block;
+    visibility: visible;
+}
+
+.mobilka {
+    width: 100%;
+    height: 50px;
+}
+
+.mobilka_wrap1 {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #9dbdc6;
+}
+
+.mobilka_wrap2 {
+    display: block;
+    float: left;
+    width: calc(100% - 100px);
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #daeaef;
+    text-align: center;
+    font-size: 24px;
+}
+
+.mobilka_wrap3 {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #9dbdc6;
+}
+
+.left-col {
+    float: left;
+    width: 15%;
+    border: 1px red solid;
+}
+
+.center-col {
+    float: left;
+    width: 50%;
+    border: 1px red solid;
+}
+
+.right-col {
+    float: left;
+    width: 15%;
+    border: 1px red solid;
+}
+
+.tmp {
+    border: 1px green solid;
+    width: 94%;
+    text-align: center;
+}

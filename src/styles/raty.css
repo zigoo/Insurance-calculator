@@ -1,0 +1,48 @@
+ 
+ .h1raty {
+     font-family: Arial;
+     font-size: 18px;
+     text-align: left;
+     color: #2c3e50;
+     padding-bottom: 0;
+     font-weight: normal;
+     margin-top: 3%;
+     margin-bottom: 3%;
+ }
+
+ .raty {
+     width: 99%;
+     display: block;
+ }
+
+ .raty_butt {
+     display: block;
+     margin-bottom: 5%;
+ }
+
+ .btn-group {
+    display: block;
+     text-align: center;
+ }
+
+ .btn-rata {
+    display: block;
+    width: 100%;
+     color: #9dbdc6;
+     background-color: #DAEAEF;
+     border: #DAEAEF;
+     border-radius: 18.5px;
+     margin-bottom: 2%;
+     line-height: 37px;
+ }
+
+ .btn-rata:hover,
+ .btn-rata:focus,
+ .btn-rata:active,
+ .btn-rata.active {
+     border-radius: 18.5px;
+     background-image: linear-gradient(45deg, #ff3d2e, #ff252c);
+     outline: 0;
+     border: #DAEAEF;
+     color: white;
+ }
