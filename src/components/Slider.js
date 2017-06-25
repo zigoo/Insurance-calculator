@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { sendSlideValue } from '../helpers/helper.js';
 import $ from 'jquery';
 
 import '../styles/slider.css';
 import '../styles/sliderCSS.css';
 
-function sendSlideValue(val) {
-  return {
-    type: 'SEND_SLIDE_VALUE',
-    val
-  }
-} 
+
 
 class Slider extends Component {
  constructor(props) {
@@ -66,10 +62,10 @@ slajder(dir) {
             <div className="grid__helpers__right text-right">10 000</div>
               <div className="slider__value">{slidValue}</div>
 
-        <div className="mobilka">
+        <div className="mobile__display">
             <div className="mobilka_wrap1"><span className="glyphicon glyphicon-chevron-left"
                  onClick={()=>this.slajder('down')} ></span></div>
-          <div className="mobilka_wrap2">{slidValue}</div>
+              <div className="mobilka_wrap2">{slidValue}</div>
             <div className="mobilka_wrap3"><span className="glyphicon glyphicon-chevron-right"
                  onClick={()=>this.slajder('up')} ></span></div>
           </div>

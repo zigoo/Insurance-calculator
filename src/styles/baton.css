@@ -6,23 +6,22 @@
 	    display: flex;
 	    align-items: center;
 	}
+	
 	.button__calc {
 	    width: 201px;
 	    height: 49px;
 	    border-radius: 24.5px;
 	    background-image: linear-gradient(45deg, #1f8a70, #bedb39);
-	    box-shadow: 0px 5px 6px 0 rgba(252, 67, 73, 0.35);
-	    margin-left: 3%;  
-
-		font-size: 16px;
-	    color:white;
+	    font-size: 16px;
+	    color: white;
+	    outline: none;
 	}
-
-.totalPay__field {
-	height: 50px;
-	width: 200px;
-	margin-left: 50px;
-	background-color: white;
-	color: black;
-	font-size: 30px;
-}
+	
+	.totalPay__field {
+	    height: 50px;
+	    width: 200px;
+	    margin-left: 50px;
+	    background-color: white;
+	    color: black;
+	    font-size: 30px;
+	}

@@ -62,18 +62,19 @@ class Baton extends Component {
  }
 
   render() {
-    const paymentTotal = this.props.totalToPay !== 0 ? this.props.totalToPay : '';
+    const paymentTotal = (this.props.totalToPay !== 0) ? (this.props.totalToPay +' zl') : '';
     return (
      <div >
+      <div className="container"> 
        <div className="button__wrapper">
-          
            <button className="button__calc"
                  onClick={()=> this.handleClick()}>
              Oblicz rate
            </button>
            <div className="totalPay__field">
-              {paymentTotal} zl
+              {paymentTotal} 
            </div>   
+          </div> 
        </div>
      </div>
     )

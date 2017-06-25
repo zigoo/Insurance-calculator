@@ -1,6 +1,6 @@
  import $ from 'jquery';
 
-function toggleClasses(element){
+export default function toggleClasses(element){
 	
 $(".btn-group > .btn-rata").click(function(){
 
@@ -15,4 +15,24 @@ $(".btn-group > .btn-rata").click(function(){
 });
 }
 
-export default toggleClasses;
+
+export function sendHowManyRates(howmany) {
+  return {
+    type: 'HOW_MANY_RATES',
+    howmany
+  }
+ }
+
+export function sendDamage(damage) {
+  return {
+    type: 'IS_DAMAGE',
+    damage
+  }
+}
+
+export function sendSlideValue(val) {
+  return {
+    type: 'SEND_SLIDE_VALUE',
+    val
+  }
+} 
