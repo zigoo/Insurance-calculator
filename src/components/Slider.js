@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { sendSlideValue } from '../helpers/helper.js';
-import $ from 'jquery';
-
+import ReactSlider from 'react-slider';
+ 
 import '../styles/slider.css';
-import '../styles/sliderCSS.css';
 
 
 class Slider extends Component {
@@ -17,9 +16,9 @@ class Slider extends Component {
 
 handleSlider() {
   const {dispatch} = this.props;
-  var val= $('#slider').val(); //doc.getelement??
+  /*var val= $('#slider').val(); //doc.getelement??
   
-  dispatch( sendSlideValue( val ) );
+  dispatch( sendSlideValue( val ) );*/
 }
 
 handleSliderDirection(dir) {
@@ -42,9 +41,18 @@ handleSliderDirection(dir) {
     <div>
      <div className="grid__slider">
        <h1>Suma ubezpieczenia</h1>
-        <input id="slider"
-             type="range" className="myslider" min="100" max="10000"
-             step="100"  defaultValue="5000"  onChange={ () => this.handleSlider()} />
+
+<div id="horizontal-0"></div>
+        <ReactSlider className="slider"
+                     handleClassName="handle"
+                     handleActiveClassName="active" 
+                     defaultValue={5000} min={1} max={10000} step={100}  
+                     withBars/>
+
+    
+    
+  
+
 
         <div className="grid__helpers">
            <div className="grid__helpers__left">100</div>
