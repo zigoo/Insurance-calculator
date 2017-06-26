@@ -16,22 +16,24 @@ class Slider extends Component {
 
 handleSlider() {
   const {dispatch} = this.props;
-  /*var val= $('#slider').val(); //doc.getelement??
-  
-  dispatch( sendSlideValue( val ) );*/
+  var sliderValue = this._ReactSlider.getValue();
+    
+  dispatch( sendSlideValue( sliderValue ) ); 
 }
 
 handleSliderDirection(dir) {
   const {dispatch} = this.props;
-  var sliderValue = this.props.sliderValue;
+  var sliderValue  = this.props.sliderValue;
+ 
    
-  sliderValue = parseInt(sliderValue, 10)
+   sliderValue = parseInt(sliderValue, 10)
 
    if (dir==='down') {
-     sliderValue -= 100;
+      sliderValue -= 100;
    } else  if (dir==='up') {
-     sliderValue += 100;
+      sliderValue += 100;
   }
+ 
   dispatch( sendSlideValue( sliderValue ) );
 }
 
@@ -45,7 +47,10 @@ handleSliderDirection(dir) {
         <ReactSlider className="slider"
                      handleClassName="handle"
                      handleActiveClassName="active" 
-                     defaultValue={5000} min={1} max={10000} step={100}  
+                     defaultValue={5000} min={0} max={10000} step={100}
+                     onAfterChange={ ()=> this.handleSlider() } 
+                     ref={(child) => { this._ReactSlider = child; }}
+                     value={ this.props.sliderValue}
                      withBars/>
    
         <div className="grid__helpers">
