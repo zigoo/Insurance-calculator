@@ -41,19 +41,13 @@ handleSliderDirection(dir) {
     <div>
      <div className="grid__slider">
        <h1>Suma ubezpieczenia</h1>
-
-<div id="horizontal-0"></div>
+ 
         <ReactSlider className="slider"
                      handleClassName="handle"
                      handleActiveClassName="active" 
                      defaultValue={5000} min={1} max={10000} step={100}  
                      withBars/>
-
-    
-    
-  
-
-
+   
         <div className="grid__helpers">
            <div className="grid__helpers__left">100</div>
            <div className="grid__helpers__right text-right">10 000</div>
