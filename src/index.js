@@ -1,20 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider }	from 'react-redux';
+import { createStore } from 'redux';
+import reducer from './helpers/reducer.js'; 
 import App from './components/App';
-
-import { Provider }					    from 'react-redux';
-import { combineReducers, createStore } from 'redux';
-import skladkaReducer from './helpers/skladkaReducer.js'; 
- 
 import './styles/index.css';
 
-const rootReducers = combineReducers({ 
-  skladka : skladkaReducer 
-   
-}); 
-
+ 
 export const store = createStore( 
-	rootReducers,
+	reducer,
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
 );
 
@@ -22,7 +16,7 @@ export const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
    <App />
-</Provider> 
+  </Provider> 
 , document.getElementById('root'));
 
  

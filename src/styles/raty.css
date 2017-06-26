@@ -4,6 +4,12 @@
         float: left;
         display: none;
     }
+    .stan__right {
+        word-wrap: break-word;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 6%;
+    }
 }
 
 .h1raty {
@@ -37,7 +43,7 @@
     background-color: #DAEAEF;
     border: #DAEAEF;
     border-radius: 18.5px;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
     line-height: 37px;
 }
 

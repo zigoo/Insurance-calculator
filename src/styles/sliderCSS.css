@@ -1,19 +1,10 @@
-/*@media screen and (-webkit-min-device-pixel-ratio:0) {
-    input[type='range'] {
-      overflow: hidden;
-      width: 100%;
-      -webkit-appearance: none;
-      background-color: green;
-    }
-  }  */
-
-
+ 
 input[type=range].myslider:focus {
   outline: none;
 }
 
 input[type=range].myslider::-webkit-slider-runnable-track {
-  max-width: 90%;
+  max-width: 100%;
   padding-right: 0;
   height: 5px;
 

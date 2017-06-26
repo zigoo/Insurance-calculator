@@ -18,13 +18,13 @@
  
  .btn-stan {
      display: block;
+     width: 100%;
      color: #9dbdc6;
      background-color: #DAEAEF;
      border: #DAEAEF;
      border-radius: 18.5px;
-     margin-bottom: 10px;
+     margin-bottom: 4%;
      line-height: 37px;
-     width: 100%;
  }
  
  .btn-stan:hover,

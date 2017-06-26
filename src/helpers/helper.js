@@ -6,9 +6,8 @@ $(".btn-group > .btn-rata").click(function(){
 
     $(this).siblings().removeClass("active");
     $(this).addClass("active");
- 
- 
 });
+
 
  $(".btn-group > .btn-stan").click(function(){
     $(this).addClass("active").siblings().removeClass("active");
@@ -36,3 +35,10 @@ export function sendSlideValue(val) {
     val
   }
 } 
+
+export function totalpay(total) {
+  return {
+    type: 'PAYMENT_TOTAL',
+    total
+  }
+}

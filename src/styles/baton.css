@@ -20,8 +20,9 @@
 	.totalPay__field {
 	    height: 50px;
 	    width: 200px;
-	    margin-left: 50px;
 	    background-color: white;
 	    color: black;
 	    font-size: 30px;
+	    text-align: center;
+	    padding-top: 1%;
 	}

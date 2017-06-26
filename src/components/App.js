@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Slider from './Slider.js';
 import Baton from './Baton.js';
-import Raty from './Raty_new.js';
+import Raty from './Raty.js';
 import '../styles/app.css';
 
 
@@ -26,8 +26,7 @@ class App extends Component {
               <Raty />
             </div>
           </div>
-            <Baton />
-         
+            <Baton />     
        </div>
      </div>
     </div>

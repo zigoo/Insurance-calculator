@@ -16,28 +16,25 @@ const initialState = {
 
 export default function prodReducer (state = initialState , action ) {
   switch (action.type) {
-    case SEND_SLIDE_VALUE:
-     console.log(typeof action.val)
-      return {
-          ...state,
-             sliderValue: action.val
-        }
-    case HOW_MANY_RATES:
-     console.log(state)
+    case SEND_SLIDE_VALUE:   
       return {
         ...state,
-            ileRat: action.howmany
+           sliderValue: action.val
+        }
+    case HOW_MANY_RATES:    
+      return {
+        ...state,
+           ileRat: action.howmany
       }
-    case IS_DAMAGE:
-    console.log(state)
+    case IS_DAMAGE: 
       return {
         ...state,
            szkoda: action.damage
       }
     case PAYMENT_TOTAL:
-     return {
-      ...state,
-        payTotal : action.total
+      return {
+        ...state,
+           payTotal : action.total
      }
     default: 
       return state;
