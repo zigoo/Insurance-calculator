@@ -11,18 +11,18 @@ class Slider extends Component {
  constructor(props) {
   super(props)
    this.handleSlider = this.handleSlider.bind(this)
-   this.slajder = this.slajder.bind(this)
+   this.handleSliderDirection = this.handleSliderDirection.bind(this)
  }
 
 
 handleSlider() {
   const {dispatch} = this.props;
-  var val= $('#slajder').val(); //doc.getelement??
+  var val= $('#slider').val(); //doc.getelement??
   
   dispatch( sendSlideValue( val ) );
 }
 
-slajder(dir) {
+handleSliderDirection(dir) {
   const {dispatch} = this.props;
   var sliderValue = this.props.sliderValue;
    
@@ -42,7 +42,7 @@ slajder(dir) {
     <div>
      <div className="grid__slider">
        <h1>Suma ubezpieczenia</h1>
-        <input id="slajder"
+        <input id="slider"
              type="range" className="myslider" min="100" max="10000"
              step="100"  defaultValue="5000"  onChange={ () => this.handleSlider()} />
 
@@ -54,13 +54,13 @@ slajder(dir) {
         <div className="mobile__display">
            <div className="mobile__helper1">
               <span className="glyphicon glyphicon-chevron-left"
-                    onClick={()=>this.slajder('down')} >
+                    onClick={()=>this.handleSliderDirection('down')} >
               </span>
             </div>
             <div className="mobile__helper2">{sliderValue}</div>
             <div className="mobile__helper3">
               <span className="glyphicon glyphicon-chevron-right"
-                    onClick={()=>this.slajder('up')} >
+                    onClick={()=>this.handleSliderDirection('up')} >
               </span>
             </div>
           </div>

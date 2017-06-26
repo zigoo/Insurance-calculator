@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { sendHowManyRates, 
          sendDamage} from '../helpers/helper.js';
 import toggleClasses from '../helpers/helper.js'
-import '../styles/raty.css';
+import '../styles/content.css';
 import '../styles/stan.css';
 
  
-class Raty extends Component {
+class Content extends Component {
  constructor(){
     super()
     this.handleClick = this.handleClick.bind(this)
@@ -71,4 +71,4 @@ render() {
  )
 }}
 
-export default connect(null)(Raty);
+export default connect(null)(Content);

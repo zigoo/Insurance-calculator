@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {totalpay} from '../helpers/helper.js';
-import '../styles/baton.css';
+import '../styles/checkout.css';
 
 
 function between(x, min, max) {
   return x >= min && x <= max;
 }
 
-class Baton extends Component {
+class Checkout extends Component {
  constructor(){
    super()
    this.handleClick = this.handleClick.bind(this)
  }
 
- handleClick() {
+ handleClick() { 
   var {insuranceValue, hasbeenDamage, howManyRates, dispatch} = this.props;
   var stawka = 130;
   var topaytotal = 130;
@@ -72,4 +72,4 @@ const mapStateToProps = (state, props) => {
     }
 }
 
-export default connect(mapStateToProps)(Baton);
+export default connect(mapStateToProps)(Checkout);

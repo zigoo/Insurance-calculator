@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Slider from './Slider.js';
-import Baton from './Baton.js';
-import Raty from './Raty.js';
+import Checkout from './Checkout.js';
+import Content from './Content.js';
 import '../styles/app.css';
 
 
@@ -23,10 +23,10 @@ class App extends Component {
           <div className="col-md-12">
             <div>
               <Slider />
-              <Raty />
+              <Content />
             </div>
           </div>
-            <Baton />     
+              <Checkout />     
        </div>
      </div>
     </div>
