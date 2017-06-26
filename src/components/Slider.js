@@ -48,8 +48,8 @@ handleSliderDirection(dir) {
 
         <div className="grid__helpers">
            <div className="grid__helpers__left">100</div>
-           <div className="slider__value">{sliderValue}</div>
            <div className="grid__helpers__right text-right">10 000</div>
+           <div className="slider__value">{sliderValue}</div>
 
         <div className="mobile__display">
            <div className="mobile__helper1">
