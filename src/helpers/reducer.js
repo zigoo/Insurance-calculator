@@ -1,6 +1,3 @@
-/* eslint-disable */
- 
-
 const SEND_SLIDE_VALUE = 'SEND_SLIDE_VALUE';
 const HOW_MANY_RATES = 'HOW_MANY_RATES';
 const IS_DAMAGE = 'IS_DAMAGE';

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { sendHowManyRates, 
          sendDamage} from '../helpers/helper.js';
-import toggleClasses from '../helpers/helper.js'
 import '../styles/content.css';
 import '../styles/stan.css';
 
