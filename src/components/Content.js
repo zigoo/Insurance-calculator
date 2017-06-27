@@ -6,18 +6,19 @@ import toggleClasses from '../helpers/helper.js'
 import '../styles/content.css';
 import '../styles/stan.css';
 
+
  
 class Content extends Component {
  constructor(){
     super()
     this.handleClick = this.handleClick.bind(this)
+    this.state = {active: null}
  }
 
-handleClick(el){ 
+handleClick(id){ 
   const {dispatch} = this.props;
-
- //  toggleClasses()
-  dispatch( sendHowManyRates(el) );  
+  this.setState({ active: id }) 
+  dispatch( sendHowManyRates(id) );   
 }
 
 handleSzkoda (el){
@@ -31,19 +32,18 @@ render() {
     <div className ="raty">
       <h1 className ="h1raty">Ilosc rat</h1>
        <div className ="raty_butt">
-          <div className="row">
-            <div className="col-sm-3">
-              <button type="button" className="btn-rata" onClick={()=>this.handleClick(1)}>1 rata</button>
-            </div>
-            <div className="col-sm-3">
-              <button type="button" className="btn-rata" onClick={()=>this.handleClick(2)}>2 raty</button>
-            </div>
-            <div className="col-sm-3">
-              <button type="button" className="btn-rata" onClick={()=>this.handleClick(3)}>3 raty</button>
-            </div>
-            <div className="col-sm-3">
-              <button type="button" className="btn-rata" onClick={()=>this.handleClick(4)}>4 raty</button>
-            </div>
+          <div className="row">            
+              <CustomButton id={1} className="btn-rata" text="1 rata"
+                            active={this.state.active===1} onClick={this.handleClick} />
+            
+              <CustomButton id={2} className="btn-rata" text="2 raty"
+                            active={this.state.active===2} onClick={this.handleClick} />
+             
+              <CustomButton id={3} className="btn-rata" text="3 raty"
+                            active={this.state.active===3} onClick={this.handleClick} />
+            
+              <CustomButton id={4} className="btn-rata" text="4 raty"
+                            active={this.state.active===4} onClick={this.handleClick} />
           </div>
         </div>
     </div>
@@ -69,6 +69,23 @@ render() {
     </div>
   </div>
  )
+}}
+
+
+class CustomButton extends Component {
+ handleClick = () => this.props.onClick(this.props.id)
+ 
+
+ render() {
+  return (
+    <div className="col-sm-3">
+      <button type="button" 
+              className={this.props.active ? "btn-active" : this.props.className}
+              onClick={ this.handleClick}>
+                {this.props.text}
+      </button>
+    </div>
+  )
 }}
 
 export default connect(null)(Content);

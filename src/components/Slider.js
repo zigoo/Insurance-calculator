@@ -6,14 +6,14 @@ import ReactSlider from 'react-slider';
 import '../styles/slider.css';
 
 
+
 class Slider extends Component {
  constructor(props) {
   super(props)
    this.handleSlider = this.handleSlider.bind(this)
    this.handleSliderDirection = this.handleSliderDirection.bind(this)
  }
-
-
+ 
 handleSlider() {
   const {dispatch} = this.props;
   var sliderValue = this._ReactSlider.getValue();
@@ -25,16 +25,14 @@ handleSliderDirection(dir) {
   const {dispatch} = this.props;
   var sliderValue  = this.props.sliderValue;
  
-   
    sliderValue = parseInt(sliderValue, 10)
 
    if (dir==='down') {
-      sliderValue -= 100;
+        sliderValue -= 100;
    } else  if (dir==='up') {
-      sliderValue += 100;
-  }
- 
-  dispatch( sendSlideValue( sliderValue ) );
+        sliderValue += 100;
+   }
+   dispatch( sendSlideValue( sliderValue ) );
 }
 
   render() {
@@ -85,4 +83,5 @@ const mapStateToProps = (state, props) => {
 }
 
 export default connect(mapStateToProps)(Slider);
+ 
  
