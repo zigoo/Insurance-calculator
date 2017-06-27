@@ -4,8 +4,6 @@ import { sendHowManyRates,
          sendDamage} from '../helpers/helper.js';
 import '../styles/content.css';
 
-
-
  
 class Content extends Component {
  constructor(){

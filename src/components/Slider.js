@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { sendSlideValue } from '../helpers/helper.js';
 import ReactSlider from 'react-slider';
- 
 import '../styles/slider.css';
-
-
+ 
 
 class Slider extends Component {
  constructor(props) {
