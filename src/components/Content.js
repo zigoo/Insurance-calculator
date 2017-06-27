@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { sendHowManyRates, 
          sendDamage} from '../helpers/helper.js';
 import '../styles/content.css';
-import '../styles/stan.css';
+
 
 
  
@@ -29,7 +29,7 @@ render() {
   return (
   <div>
     <div className ="raty">
-      <h1 className ="h1raty">Ilosc rat</h1>
+      <h1>Ilosc rat</h1>
        <div className ="raty_butt">
           <div className="row">            
               <CustomButton id={1} className="btn-rata" text="1 rata"
@@ -47,7 +47,7 @@ render() {
         </div>
     </div>
 	<div className ="stan">
-      <h1 className ="h1stan">Stan</h1>
+      <h1>Stan</h1>
        <div className ="stan_butt">
          <div className="stan__left">
            <div className="btn-group row">

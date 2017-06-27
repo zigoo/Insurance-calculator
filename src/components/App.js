@@ -14,7 +14,7 @@ class App extends Component {
       <div className="wrapper__top">  
        <div className="container">     
         <div className="top_title">
-            Kalkulator
+            <h1>Kalkulator</h1>
         </div>    
        </div> 
       </div>

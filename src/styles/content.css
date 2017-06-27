@@ -12,13 +12,13 @@
     }
 }
 
-.h1raty {
-    font-family: Arial;
+.raty h1 {
     font-size: 18px;
     text-align: left;
     color: #2c3e50;
     font-weight: normal;
     margin-bottom: 3%;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .raty {
@@ -74,3 +74,43 @@
     line-height: 37px;
     outline: none;
 }
+
+ .stan h1 {
+     font-size: 18px;
+     text-align: left;
+     color: #2c3e50;
+     font-weight: normal;
+     margin-bottom: 3%;
+     font-family: 'Source Sans Pro', sans-serif;
+ }
+ 
+ .stan_butt,
+ .stan {
+     display: block;
+ }
+ 
+ .btn-group {
+     text-align: center;
+ }
+ 
+ .btn-stan {
+     display: block;
+     width: 100%;
+     color: #9dbdc6;
+     background-color: #DAEAEF;
+     border: #DAEAEF;
+     border-radius: 18.5px;
+     margin-bottom: 4%;
+     line-height: 37px;
+ }
+ 
+ .btn-stan:hover,
+ .btn-stan:focus,
+ .btn-stan:active,
+ .btn-stan.active {
+     border: #DAEAEF;
+     border-radius: 18.5px;
+     background-image: linear-gradient(45deg, #ff3d2e, #ff252c);
+     outline: 0;
+     color: white;
+ }

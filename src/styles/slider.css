@@ -37,6 +37,12 @@
          padding-left: 3%;
      }
  }
+
+ @font-face {
+  font-family: SourceSansBold;
+  src: url('../font/SourceSansPro-Bold.otf') format('otf');
+  font-weight: normal;
+}
  
  span {
      color: #9dbdc6;
@@ -52,6 +58,8 @@
      font-size: 18px;
      margin-bottom: 3%;
      margin-top: 5%;
+     color: #2c3e50;;
+     font-family: 'Source Sans Pro', sans-serif;
  }
  
  .grid__helpers {
@@ -106,6 +114,8 @@
      font-size: 24px;
      color: #ff3d2e;
      padding-top: 2%;
+     font-family: 'SourceSansBold', sans-serif;
+
  }
  
  .mobile__helper3 {
