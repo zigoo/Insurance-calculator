@@ -91,10 +91,9 @@ render() {
 
  const mapStateToProps = (state, props) => {
   return {
-    selected : state.selbtns 
-
+    selected : state.selbtns
   }
-} 
+}
 
  export default connect(mapStateToProps)(Content)
  
