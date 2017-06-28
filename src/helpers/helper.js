@@ -25,3 +25,10 @@ export function totalpay(total) {
     total
   }
 }
+
+export function toggleselected(selected){
+  return {
+    type:'SELECT_BTN',
+    selected
+  }
+}

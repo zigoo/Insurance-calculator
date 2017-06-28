@@ -2,12 +2,14 @@ const SEND_SLIDE_VALUE = 'SEND_SLIDE_VALUE';
 const HOW_MANY_RATES = 'HOW_MANY_RATES';
 const IS_DAMAGE = 'IS_DAMAGE';
 const PAYMENT_TOTAL = 'PAYMENT_TOTAL';
+const SELECT_BTN = 'SELECT_BTN';
 
 const initialState = {
   sliderValue: 5000,
   szkoda: false,
   ileRat: 1,
-  payTotal:0
+  payTotal:0,
+  selbtns:''
 };
 
 
@@ -33,6 +35,11 @@ export default function prodReducer (state = initialState , action ) {
         ...state,
            payTotal : action.total
      }
+    case SELECT_BTN:
+      return {
+        ...state,
+        selbtns:  action.selected
+      }
     default: 
       return state;
     }

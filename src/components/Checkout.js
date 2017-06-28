@@ -37,9 +37,9 @@ class Checkout extends Component {
  }
 
  if (howManyRates === 1) { 
-  topaytotal = topaytotal * 0.98
+       topaytotal = topaytotal * 0.98
  } else if (howManyRates === 4) {
-  topaytotal = topaytotal * 1.04
+       topaytotal = topaytotal * 1.04
  }
 
   topaytotal = Math.ceil(topaytotal);
