@@ -11,11 +11,13 @@ class CustomButton extends Component {
 let klasa;
  
   let aktyw = this.props.selected;
-  if (aktyw === this.props.id) {
+  let aktyw2 = this.props.selectedb;
+
+  if (aktyw === this.props.id && this.props.id <= 4) {
+        klasa = "btn-active"
+  } else  if (aktyw2 === this.props.id && this.props.id >= 5) {
         klasa = "btn-active"
   } else klasa = "btn-rata";
-
-
 
   return (
     <div className="col-sm-3">
@@ -31,7 +33,8 @@ let klasa;
 
 const mapStateToProps = (state, props) => {
   return {
-    selected : state.selbtns
+    selected  : state.selbtns,
+    selectedb : state.selbtnsb
   }
 }
 

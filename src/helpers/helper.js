@@ -27,8 +27,16 @@ export function totalpay(total) {
 }
 
 export function toggleselected(selected){
-  return {
-    type:'SELECT_BTN',
-    selected
+  switch(true) {
+   case( selected <= 4):
+    return {
+     type:'SELECT_BTN',
+     selected
+    }
+   case( selected >= 5):
+    return {
+     type:'SELECT_BTNB',
+     selected
+    } 
   }
 }
