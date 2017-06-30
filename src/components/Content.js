@@ -40,20 +40,16 @@ render() {
       <h1>Ilosc rat</h1>
        <div className ="raty_butt">
           <div className="row">            
-              <CustomButton id={1}   text="1 rata"
-                            btnGroup={1}
+              <CustomButton id={1}   text="1 rata"                            
                             onClick={this.handleClick} />
             
               <CustomButton id={2}  text="2 raty"
-                            btnGroup={1}
                             onClick={this.handleClick} />
              
-              <CustomButton id={3}   text="3 raty"
-                            btnGroup={1}
+              <CustomButton id={3}  text="3 raty"
                             onClick={this.handleClick} />
             
               <CustomButton id={4}  text="4 raty"
-                           btnGroup={1}
                             onClick={this.handleClick} />
           </div>
         </div>
@@ -63,13 +59,11 @@ render() {
        <div className ="stan_butt">
          <div className="stan__left">
            <div className="btn-group row">
-               <CustomButton id={5}   text="bez szkód"
-                             btnGroup={2}
-                             onClick={ this.handleClick} />
+               <CustomButton id={5}  text="bez szkód"
+                             onClick={this.handleClick} />
 
-               <CustomButton id={6}   text="wyrządzona szkoda"
-                             btnGroup={2}
-                             onClick={ this.handleClick} />
+               <CustomButton id={6}  text="wyrządzona szkoda"
+                             onClick={this.handleClick} />
 
                 <div className="col-sm-6">
                   <div className="stan__right text-center">
