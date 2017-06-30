@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "node-sass-chokidar": "0.0.3",
     "rangeslider.js": "^2.3.0",
-    "react": "^15.6.1",   "react-dom": "^15.6.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0"
   },

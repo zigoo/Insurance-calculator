@@ -9,11 +9,6 @@ function between(x, min, max) {
 
 
 class Checkout extends React.Component {
- constructor(){
-   super();
-   this.handleClick = this.handleClick.bind(this);
- }
-
  handleClick() { 
   let {insuranceValue, hasbeenDamage, howManyRates, dispatch} = this.props;
   let stawka = 130;
@@ -54,7 +49,7 @@ class Checkout extends React.Component {
                  onClick={()=> this.handleClick()}>
                     Oblicz rate
          </button>
-         <div className="totalPay__field">
+         <div className="totalPay__field text-right">
                   {paymentTotal} 
         </div>   
       </div> 

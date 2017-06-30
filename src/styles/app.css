@@ -7,9 +7,6 @@
     .button__wrapper {
         padding-left: 2%;
     }
-    .totalPay__field {
-        margin-left: 42%;
-    }
 }
 
 @media screen and (max-width: 480px) {
