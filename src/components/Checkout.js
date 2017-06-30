@@ -1,6 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import {totalpay} from '../helpers/helper.js';
+import { totalpay } from '../helpers/helper.js';
 import '../styles/checkout.css';
 
 
@@ -62,15 +61,6 @@ class Checkout extends React.Component {
      </div>
     )
   }
- }
-
-const mapStateToProps = (state, props) => {
-    return {  
-       insuranceValue: state.slider_value,
-       hasbeenDamage : state.is_damage,
-       howManyRates  : state.rates_quantity,
-       totalToPay    : state.pay_total,
-    }
 }
 
-export default connect(mapStateToProps)(Checkout);
+export default Checkout;

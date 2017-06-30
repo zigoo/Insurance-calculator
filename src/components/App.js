@@ -1,6 +1,6 @@
 import React from 'react';
-import Slider from './Slider.js';
-import Checkout from './Checkout.js';
+import Slider from '../containers/Slider.js';
+import Checkout from '../containers/Checkout.js';
 import Content from './Content.js';
 import '../styles/app.css';
 

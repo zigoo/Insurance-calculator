@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { sendHowManyRates, 
          sendDamage, toggleselected} from '../helpers/helper.js';
-import CustomButton from './CustomButton.js'
+import CustomButton from '../containers/CustomButton.js'
 import App from './App.js'
 import '../styles/content.css';
 

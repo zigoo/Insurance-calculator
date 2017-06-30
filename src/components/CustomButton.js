@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
- 
 
 class CustomButton extends React.Component {
 
@@ -30,12 +28,4 @@ class CustomButton extends React.Component {
   )
 }}
 
-
-const mapStateToProps = (state, props) => {
-  return {
-    selected  : state.sel_btn_a,
-    selectedb : state.sel_btn_b
-  }
-}
-
-export default connect(mapStateToProps)(CustomButton)
+export default CustomButton;

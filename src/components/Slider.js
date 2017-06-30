@@ -1,7 +1,6 @@
 import React  from 'react';
-import { connect } from 'react-redux';
-import { sendSlideValue } from '../helpers/helper.js';
 import ReactSlider from 'react-slider';
+import { sendSlideValue } from '../helpers/helper.js';
 import '../styles/slider.css';
  
 
@@ -73,13 +72,4 @@ handleSliderDirection(dir) {
    )
 }}
 
-
-const mapStateToProps = (state, props) => {
-    return {
-       sliderValue : state.slider_value 
-    }
-}
-
-export default connect(mapStateToProps)(Slider);
- 
- 
+export default Slider;
