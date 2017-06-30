@@ -6,12 +6,12 @@ const SELECT_BTN = 'SELECT_BTN';
 const SELECT_BTNB = 'SELECT_BTNB';
 
 const initialState = {
-  sliderValue: 5000,
-  szkoda: false,
-  ileRat: 1,
-  payTotal:0,
-  selbtns:'',
-  selbtnsb:''
+  slider_value: 5000,
+  is_damage: false,
+  rates_quantity: 1,
+  pay_total:0,
+  sel_btn_a:'',
+  sel_btn_b:''
 };
 
 
@@ -20,32 +20,32 @@ export default function prodReducer (state = initialState , action ) {
     case SEND_SLIDE_VALUE:   
       return {
         ...state,
-           sliderValue: action.val
+           slider_value: action.val
         }
     case HOW_MANY_RATES:    
       return {
         ...state,
-           ileRat: action.howmany
+           rates_quantity: action.howmany
       }
     case IS_DAMAGE: 
       return {
         ...state,
-           szkoda: action.damage
+           is_damage: action.damage
       }
     case PAYMENT_TOTAL:
       return {
         ...state,
-           payTotal : action.total
+           pay_total : action.total
      }
     case SELECT_BTN:
       return {
         ...state,
-           selbtns:  action.selected
+           sel_btn_a:  action.selected
       }
     case SELECT_BTNB:
       return {
         ...state,
-           selbtnsb:  action.selected
+           sel_btn_b:  action.selected
       }
     default: 
       return state;

@@ -1,8 +1,40 @@
-.wrapper__top {
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+@media screen and (min-width: 480px) {
+    .slider__mobile__display {
+        display: none;
+    }
+    .stan__right,
+    .button__wrapper {
+        padding-left: 2%;
+    }
+    .totalPay__field {
+        margin-left: 42%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slider {
+        margin-top: 10%;
+        padding-bottom: 5%;
+    }
+    .slider h1 {
+        padding-bottom: 5%;
+    }
+    .slider__value {
+        visibility: hidden;
+    }
+    .stan__right {
+        padding-bottom: 15%;
+    }
+    .button__wrapper {
+        padding-left: 3%;
+    }
+}
+
+.wrapperTop {
     width: 100%;
     height: 84px;
     display: flex;
-    justify-content: left;
     align-items: center;
     margin-left: 0;
     border-radius: 8px;
@@ -10,7 +42,7 @@
     text-align: left;
 }
 
-.top_title {
+.title {
     display: inline-block;
     vertical-align: middle;
     text-align: left;
@@ -18,10 +50,10 @@
     color: white;
 }
 
-.top_title h1 {
+.title h1 {
     text-align: left;
     font-size: 24px;
     margin-right: 0;
     color: white;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro Light', sans-serif;
 }

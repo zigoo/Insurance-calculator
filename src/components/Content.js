@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { sendHowManyRates, 
          sendDamage, toggleselected} from '../helpers/helper.js';
 import CustomButton from './CustomButton.js'
+import App from './App.js'
 import '../styles/content.css';
 
  
-class Content extends Component {
+class Content extends React.Component {
  constructor(){
     super()
     this.handleClick = this.handleClick.bind(this)
@@ -16,14 +17,9 @@ handleClick(id){
   const {dispatch} = this.props;
    
   dispatch( toggleselected(id))
- 
-  let selected = this.props.selected 
-  let idd = this.props.id;
- 
-
   switch(true) {
      case (id <= 4):     
-       dispatch( sendHowManyRates(id) );  
+       dispatch( sendHowManyRates(id) );
       break;
      case (id === 5):
        dispatch( sendDamage(false) );
@@ -32,7 +28,7 @@ handleClick(id){
        dispatch( sendDamage(true) );
       break;
      default:
-       break;
+      break;
    }
  }
 
@@ -62,38 +58,30 @@ render() {
           </div>
         </div>
     </div>
-   <div className ="stan">
+    <div className ="stan">
       <h1>Stan</h1>
        <div className ="stan_butt">
          <div className="stan__left">
            <div className="btn-group row">
-                <CustomButton id={5}   text="bez szkod"
-                              btnGroup={2}
-                               onClick={ this.handleClick} />
+               <CustomButton id={5}   text="bez szkód"
+                             btnGroup={2}
+                             onClick={ this.handleClick} />
 
-                <CustomButton id={6}   text="szkoda"
-                              btnGroup={2}
-                               onClick={ this.handleClick} />
+               <CustomButton id={6}   text="wyrządzona szkoda"
+                             btnGroup={2}
+                             onClick={ this.handleClick} />
 
-                <div className="col-sm-6 text-center">
+                <div className="col-sm-6">
                   <div className="stan__right text-center">
-                   Brak wyboru oznacza nowego klienta bez przeszlosci
-                 </div>
-              </div>
+                        Brak wyboru oznacza nowego klienta bez przeszlosci
+                  </div>
+                </div>
            </div>
          </div>
-         </div>
+        </div>
     </div>
   </div>
  )
 }}
 
-
- const mapStateToProps = (state, props) => {
-  return {
-    selected : state.selbtns
-  }
-}
-
- export default connect(mapStateToProps)(Content)
- 
+export default connect(App)(Content)

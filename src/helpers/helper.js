@@ -38,5 +38,7 @@ export function toggleselected(selected){
      type:'SELECT_BTNB',
      selected
     } 
+   default:
+    return selected;
   }
 }

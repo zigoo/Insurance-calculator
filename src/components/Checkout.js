@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import {totalpay} from '../helpers/helper.js';
 import '../styles/checkout.css';
@@ -9,16 +9,16 @@ function between(x, min, max) {
 }
 
 
-class Checkout extends Component {
+class Checkout extends React.Component {
  constructor(){
-   super()
-   this.handleClick = this.handleClick.bind(this)
+   super();
+   this.handleClick = this.handleClick.bind(this);
  }
 
  handleClick() { 
-  var {insuranceValue, hasbeenDamage, howManyRates, dispatch} = this.props;
-  var stawka = 130;
-  var topaytotal = 130;
+  let {insuranceValue, hasbeenDamage, howManyRates, dispatch} = this.props;
+  let stawka = 130;
+  let topaytotal = 130;
 
   insuranceValue = parseInt(insuranceValue,10);
  
@@ -31,15 +31,15 @@ class Checkout extends Component {
  topaytotal = stawka;
   
  if (hasbeenDamage) {
-   topaytotal = topaytotal * 1.08
+   topaytotal = topaytotal * 1.08;
  } else if (!hasbeenDamage) {
-   topaytotal = topaytotal * 0.95
+   topaytotal = topaytotal * 0.95;
  }
 
  if (howManyRates === 1) { 
-       topaytotal = topaytotal * 0.98
+       topaytotal = topaytotal * 0.98;
  } else if (howManyRates === 4) {
-       topaytotal = topaytotal * 1.04
+       topaytotal = topaytotal * 1.04;
  }
 
   topaytotal = Math.ceil(topaytotal);
@@ -66,10 +66,10 @@ class Checkout extends Component {
 
 const mapStateToProps = (state, props) => {
     return {  
-       insuranceValue: state.sliderValue,
-       hasbeenDamage : state.szkoda,
-       howManyRates  : state.ileRat,
-       totalToPay    : state.payTotal,
+       insuranceValue: state.slider_value,
+       hasbeenDamage : state.is_damage,
+       howManyRates  : state.rates_quantity,
+       totalToPay    : state.pay_total,
     }
 }
 

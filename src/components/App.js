@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Slider from './Slider.js';
 import Checkout from './Checkout.js';
 import Content from './Content.js';
 import '../styles/app.css';
 
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
     <div>
-      <div className="wrapper__top">  
+      <div className="wrapperTop">  
        <div className="container">     
-        <div className="top_title">
+        <div className="title">
             <h1>Kalkulator</h1>
         </div>    
        </div> 

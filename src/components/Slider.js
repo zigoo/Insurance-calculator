@@ -1,35 +1,35 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import { connect } from 'react-redux';
 import { sendSlideValue } from '../helpers/helper.js';
 import ReactSlider from 'react-slider';
 import '../styles/slider.css';
  
 
-class Slider extends Component {
+class Slider extends React.Component {
  constructor(props) {
   super(props)
-   this.handleSlider = this.handleSlider.bind(this)
+   this.handleSliderUpdate = this.handleSliderUpdate.bind(this)
    this.handleSliderDirection = this.handleSliderDirection.bind(this)
  }
  
-handleSlider() {
+handleSliderUpdate() {
   const {dispatch} = this.props;
-  var sliderValue = this._ReactSlider.getValue();
+  let sliderValue = this._ReactSlider.getValue();
     
   dispatch( sendSlideValue( sliderValue ) ); 
 }
 
 handleSliderDirection(dir) {
   const {dispatch} = this.props;
-  var sliderValue  = this.props.sliderValue;
+  let sliderValue  = this.props.sliderValue;
  
    sliderValue = parseInt(sliderValue, 10)
 
    if (dir==='down') {
         sliderValue -= 100;
    } else  if (dir==='up') {
-        sliderValue += 100;
-   }
+        sliderValue += 100; }
+
    dispatch( sendSlideValue( sliderValue ) );
 }
 
@@ -37,31 +37,31 @@ handleSliderDirection(dir) {
    const sliderValue = this.props.sliderValue;
    return (
     <div>
-     <div className="grid__slider">
+     <div className="slider">
        <h1>Suma ubezpieczenia</h1>
  
-        <ReactSlider className="slider"
+        <ReactSlider className="__slider"
                      handleClassName="handle"
                      handleActiveClassName="active" 
                      defaultValue={5000} min={0} max={10000} step={100}
-                     onAfterChange={ ()=> this.handleSlider() } 
+                     onAfterChange={ ()=> this.handleSliderUpdate() } 
                      ref={(child) => { this._ReactSlider = child; }}
                      value={ this.props.sliderValue}
                      withBars/>
    
-        <div className="grid__helpers">
-           <div className="grid__helpers__left">100</div>
-           <div className="grid__helpers__right text-right">10 000</div>
+        <div className="slider__helpers">
+           <div className="slider__helpers--left">100</div>
+           <div className="slider__helpers--right text-right">10 000</div>
            <div className="slider__value">{sliderValue}</div>
 
-        <div className="mobile__display">
-           <div className="mobile__helper1">
+        <div className="slider__mobile__display">
+           <div className="slider__mobile--helperLeft">
               <span className="glyphicon glyphicon-chevron-left"
                     onClick={()=>this.handleSliderDirection('down')} >
               </span>
             </div>
-            <div className="mobile__helper2">{sliderValue}</div>
-            <div className="mobile__helper3">
+            <div className="slider__mobile--helperMiddle">{sliderValue}</div>
+            <div className="slider__mobile--helperRight">
               <span className="glyphicon glyphicon-chevron-right"
                     onClick={()=>this.handleSliderDirection('up')} >
               </span>
@@ -76,7 +76,7 @@ handleSliderDirection(dir) {
 
 const mapStateToProps = (state, props) => {
     return {
-       sliderValue : state.sliderValue 
+       sliderValue : state.slider_value 
     }
 }
 

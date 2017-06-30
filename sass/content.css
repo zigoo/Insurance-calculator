@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
 @media screen and (max-width: 480px) {
     .slider__value {
         clear: both;
@@ -10,18 +9,16 @@
         margin-left: 15%;
         margin-right: 15%;
         margin-top: 6%;
-        font-family: 'Source Sans Pro Regular', sans-serif;
     }
 }
 
-.stan h1,
 .raty h1 {
     font-size: 18px;
     text-align: left;
     color: #2c3e50;
     font-weight: normal;
     margin-bottom: 3%;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .raty {
@@ -39,11 +36,7 @@
     text-align: center;
 }
 
-button {
-    font-weight: bold;
-}
-
-.btn-rate {
+.btn-rata {
     display: block;
     width: 100%;
     color: #9dbdc6;
@@ -55,8 +48,6 @@ button {
     outline: none;
 }
 
-.btn-rate:hover,
-.btn-rate:focus,
 .btn-active {
     display: block;
     width: 100%;
@@ -69,11 +60,59 @@ button {
     background-image: linear-gradient(45deg, #ff3d2e, #ff252c);
 }
 
-.stan_butt,
-.stan {
+.btn-rata:hover,
+.btn-rata:focus,
+{
     display: block;
+    width: 100%;
+    color: white;
+    background-color: red;
+    border: #DAEAEF;
+    border-radius: 18.5px;
+    margin-bottom: 4%;
+    line-height: 37px;
+    outline: none;
+    background-image: linear-gradient(45deg, #ff3d2e, #ff252c);
 }
 
-.btn-group {
-    text-align: center;
-}
+ .stan h1 {
+     font-size: 18px;
+     text-align: left;
+     color: #2c3e50;
+     font-weight: normal;
+     margin-bottom: 3%;
+     font-family: 'Source Sans Pro', sans-serif;
+ }
+ 
+ .stan_butt,
+ .stan {
+     display: block;
+ }
+ 
+ .btn-group {
+     text-align: center;
+ }
+ 
+ /*
+ .btn-stan {
+     display: block;
+     width: 100%;
+     color: #9dbdc6;
+     background-color: blue;
+     border: #DAEAEF;
+     border-radius: 18.5px;
+     margin-bottom: 4%;
+     line-height: 37px;
+ }
+ 
+ .btn-stan:hover,
+ .btn-stan:focus,
+ .btn-stan:active,
+ .btn-stan.active {
+     border: #DAEAEF;
+     border-radius: 18.5px;
+     background: blue;
+     outline: 0;
+     color: white;
+ }
+*/
