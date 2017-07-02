@@ -1,11 +1,11 @@
 import CustomButton from '../components/CustomButton.js';
 import { connect } from 'react-redux';
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = (state) => {
   return {
-    selected  : state.sel_btn_a,
-    selectedb : state.sel_btn_b
-  }
-}
+    selected: state.sel_btn_a,
+    selectedb: state.sel_btn_b
+  };
+};
 
-export default connect(mapStateToProps)(CustomButton)
+export default connect(mapStateToProps)(CustomButton);
