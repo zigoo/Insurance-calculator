@@ -11,18 +11,18 @@ function between(x, min, max) {
 class Checkout extends React.Component {
  handleClick() { 
   let {insuranceValue, hasbeenDamage, howManyRates, dispatch} = this.props;
-  let stawka = 130;
+  let rate = 130;
   let topaytotal = 130;
 
   insuranceValue = parseInt(insuranceValue,10);
  
-  if (between(insuranceValue, 100, 1000)) {stawka=20;} 
-  else if (between(insuranceValue, 1001, 3000)) {stawka=70}
-  else if (between(insuranceValue, 3001, 6000)) {stawka=130}
-  else if (between(insuranceValue, 6001, 9000)) {stawka=180} 
-  else if (between(insuranceValue, 9001, 10000)) {stawka=200}
+  if (between(insuranceValue, 100, 1000)) {rate=20;} 
+  else if (between(insuranceValue, 1001, 3000)) {rate=70}
+  else if (between(insuranceValue, 3001, 6000)) {rate=130}
+  else if (between(insuranceValue, 6001, 9000)) {rate=180} 
+  else if (between(insuranceValue, 9001, 10000)) {rate=200}
    
- topaytotal = stawka;
+ topaytotal = rate;
   
  if (hasbeenDamage) {
    topaytotal = topaytotal * 1.08;
